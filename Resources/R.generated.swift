@@ -51,19 +51,33 @@ struct _R {
     let developmentRegion = "en"
   }
 
-  /// This `_R.string` struct is generated, and contains static references to 1 localization tables.
+  /// This `_R.string` struct is generated, and contains static references to 2 localization tables.
   struct string {
     let bundle: Foundation.Bundle
     let preferredLanguages: [String]?
     let locale: Locale?
+    var label: label { .init(source: .init(bundle: bundle, tableName: "label", preferredLanguages: preferredLanguages, locale: locale)) }
     var navigationTitle: navigationTitle { .init(source: .init(bundle: bundle, tableName: "navigationTitle", preferredLanguages: preferredLanguages, locale: locale)) }
 
+    func label(preferredLanguages: [String]) -> label {
+      .init(source: .init(bundle: bundle, tableName: "label", preferredLanguages: preferredLanguages, locale: locale))
+    }
     func navigationTitle(preferredLanguages: [String]) -> navigationTitle {
       .init(source: .init(bundle: bundle, tableName: "navigationTitle", preferredLanguages: preferredLanguages, locale: locale))
     }
 
 
-    /// This `_R.string.navigationTitle` struct is generated, and contains static references to 4 localization keys.
+    /// This `_R.string.label` struct is generated, and contains static references to 1 localization keys.
+    struct label {
+      let source: RswiftResources.StringResource.Source
+
+      /// Value: Submit
+      ///
+      /// Key: submit
+      var submit: RswiftResources.StringResource { .init(key: "submit", tableName: "label", source: source, developmentValue: nil, comment: nil) }
+    }
+
+    /// This `_R.string.navigationTitle` struct is generated, and contains static references to 5 localization keys.
     struct navigationTitle {
       let source: RswiftResources.StringResource.Source
 
