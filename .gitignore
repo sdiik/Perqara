@@ -120,4 +120,5 @@ iOSInjectionProject/
 # End of https://www.toptal.com/developers/gitignore/api/swift,macos
 
 # R.swift
-**/*/*.generated.swift
+#**/*/*.generated.swift
+R.generated.swift
