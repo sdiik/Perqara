@@ -94,6 +94,13 @@ struct _R {
       ///
       /// Locales: en
       var login: RswiftResources.StringResource { .init(key: "login", tableName: "navigationTitle", source: source, developmentValue: "Login", comment: nil) }
+
+      /// en translation: Register
+      ///
+      /// Key: register
+      ///
+      /// Locales: en
+      var register: RswiftResources.StringResource { .init(key: "register", tableName: "navigationTitle", source: source, developmentValue: "Register", comment: nil) }
     }
   }
 
