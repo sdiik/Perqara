@@ -15,11 +15,21 @@ struct _R {
 
   let reuseIdentifier = reuseIdentifier()
 
+  var string: string { .init(bundle: bundle, preferredLanguages: nil, locale: nil) }
   var color: color { .init(bundle: bundle) }
   var image: image { .init(bundle: bundle) }
   var nib: nib { .init(bundle: bundle) }
   var storyboard: storyboard { .init(bundle: bundle) }
 
+  func string(bundle: Foundation.Bundle) -> string {
+    .init(bundle: bundle, preferredLanguages: nil, locale: nil)
+  }
+  func string(locale: Foundation.Locale) -> string {
+    .init(bundle: bundle, preferredLanguages: nil, locale: locale)
+  }
+  func string(preferredLanguages: [String], locale: Locale? = nil) -> string {
+    .init(bundle: bundle, preferredLanguages: preferredLanguages, locale: locale)
+  }
   func color(bundle: Foundation.Bundle) -> color {
     .init(bundle: bundle)
   }
@@ -39,6 +49,31 @@ struct _R {
 
   struct project {
     let developmentRegion = "en"
+  }
+
+  /// This `_R.string` struct is generated, and contains static references to 1 localization tables.
+  struct string {
+    let bundle: Foundation.Bundle
+    let preferredLanguages: [String]?
+    let locale: Locale?
+    var navigationTitle: navigationTitle { .init(source: .init(bundle: bundle, tableName: "navigationTitle", preferredLanguages: preferredLanguages, locale: locale)) }
+
+    func navigationTitle(preferredLanguages: [String]) -> navigationTitle {
+      .init(source: .init(bundle: bundle, tableName: "navigationTitle", preferredLanguages: preferredLanguages, locale: locale))
+    }
+
+
+    /// This `_R.string.navigationTitle` struct is generated, and contains static references to 1 localization keys.
+    struct navigationTitle {
+      let source: RswiftResources.StringResource.Source
+
+      /// en translation: Login
+      ///
+      /// Key: login
+      ///
+      /// Locales: en
+      var login: RswiftResources.StringResource { .init(key: "login", tableName: "navigationTitle", source: source, developmentValue: "Login", comment: nil) }
+    }
   }
 
   /// This `_R.color` struct is generated, and contains static references to 8 colors.
