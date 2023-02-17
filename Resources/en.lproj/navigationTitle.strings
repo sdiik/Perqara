@@ -8,5 +8,7 @@
 
 "login" = "Login";
 "home" = "Home";
+"inbox" = "Inbox";
 "favorites" = "Favorites";
 "faq" = "FAQ";
+"register" = "Register";
