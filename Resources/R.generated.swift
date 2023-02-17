@@ -63,9 +63,16 @@ struct _R {
     }
 
 
-    /// This `_R.string.navigationTitle` struct is generated, and contains static references to 3 localization keys.
+    /// This `_R.string.navigationTitle` struct is generated, and contains static references to 4 localization keys.
     struct navigationTitle {
       let source: RswiftResources.StringResource.Source
+
+      /// en translation: FAQ
+      ///
+      /// Key: faq
+      ///
+      /// Locales: en
+      var faq: RswiftResources.StringResource { .init(key: "faq", tableName: "navigationTitle", source: source, developmentValue: "FAQ", comment: nil) }
 
       /// en translation: Favorites
       ///
