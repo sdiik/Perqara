@@ -53,3 +53,7 @@ Podfile.lock
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 **/xcshareddata/WorkspaceSettings.xcsettings
+
+# fastlane
+Fastlane/report.xml
+Fastlane/test_output
