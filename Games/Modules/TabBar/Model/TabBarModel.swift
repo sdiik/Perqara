@@ -23,9 +23,9 @@ enum tabBarType: String {
     var navigationTitle: String {
         switch self {
         case .home:
-            return "Game For You"
+            return R.string.navigationTitle.home()
         case .favorite:
-            return "Favorite Games"
+            return R.string.navigationTitle.favorite()
         }
     }
     
