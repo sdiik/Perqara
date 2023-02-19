@@ -12,6 +12,7 @@
 *.perspectivev3
 *.pbxuser
 *.xccheckout
+*.xcuserstate
 *.generated.swift
 
 # Xcode
