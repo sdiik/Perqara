@@ -13,7 +13,7 @@
 *.pbxuser
 *.xccheckout
 *.xcuserstate
-*.generated.swift
+#*.generated.swift
 
 # Xcode
 xcuserdata/
