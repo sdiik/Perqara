@@ -22,8 +22,6 @@ DerivedData/
 
 # build products
 build/
-rswift.xcarchive
-rswift.xcodeproj
 *.[oa]
 
 # repositories
@@ -33,6 +31,8 @@ CVS
 
 # Cocoapods
 Pods/
+# Add this line if you want to avoid checking in source code from the Xcode workspace
+*.xcworkspace
 
 # automatic backup files
 *~.nib
@@ -43,3 +43,13 @@ Backup[ ]of[ ]*.pages/
 Backup[ ]of[ ]*.key/
 Backup[ ]of[ ]*.numbers/
 Podfile.lock
+
+
+### Xcode Patch ###
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcodeproj/project.xcworkspace/
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+**/xcshareddata/WorkspaceSettings.xcsettings
