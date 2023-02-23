@@ -1,11 +1,12 @@
 name: testing
 
 on:
-  pull_request
+  pull_request:
     branches:
         - main
 jobs:
-    runs-on: macos-11
-    if: ${{ github.event.requested_team.name == 'octo-team'}}
+  run_if:
+    if:  startsWith(github.head_ref, 'releases/')
+    runs-on: macos-14
     steps:
-      - run: echo 'A review from octo-team was requested'
+      - run: echo "The head of this PR starts with 'releases/'"
