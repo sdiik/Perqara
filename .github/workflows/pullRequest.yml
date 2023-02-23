@@ -6,6 +6,6 @@ on:
         - main
 jobs:
     run_if:
-        runs-on: ubuntu-latest
+        runs-on: macos-11
         steps:
           - run: echo "The head of this PR starts with 'releases/'"
