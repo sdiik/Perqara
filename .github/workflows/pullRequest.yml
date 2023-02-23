@@ -6,6 +6,10 @@ on:
       - develop
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pull-request: read
+
 jobs:
   test:
     runs-on: macos-11
