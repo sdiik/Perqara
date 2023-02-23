@@ -6,6 +6,5 @@ on:
         - main
 jobs:
     runs-on: macos-11
-    if: ${{ github.event.requested_team.name == 'octo-team'}}
     steps:
       - run: echo 'A review from octo-team was requested'
