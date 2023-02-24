@@ -6,7 +6,7 @@ on:
         - main
 jobs:
   run_if:
-    if:  startsWith(github.head_ref, 'releases/')
+    if:  startsWith(github.head_ref, 'fix/')
     runs-on: ubuntu-latest
     steps:
       - name: checkout
