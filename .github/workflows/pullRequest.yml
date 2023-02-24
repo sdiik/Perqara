@@ -15,6 +15,7 @@ jobs:
       - name: setup ruby
         uses: actions/setup-ruby@v1
         with:
+            ruby-version: '3.0'
             bundler-cache: true
       
       
