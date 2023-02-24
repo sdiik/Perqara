@@ -9,10 +9,10 @@ jobs:
     if:  startsWith(github.head_ref, 'fix/')
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
         uses: actions/checkout@v2
-      
-      - name: setup ruby
-        uses: actions/setup-ruby@v1
+      - uses: actions/download-artifact@v2
+        with:
+          name: Game.ipa
+
       
       
