@@ -7,6 +7,14 @@ on:
 jobs:
   run_if:
     if:  startsWith(github.head_ref, 'releases/')
-    runs-on: macos-14
+    runs-on: ubuntu-latest
     steps:
-      - run: echo "The head of this PR starts with 'releases/'"
+      - name: checkout
+        uses: actions/checkout@v2
+      
+      - name: setup ruby
+        uses: actions/setup-ruby@v1
+        with:
+            ruby-version: '2.6'
+      
+      
