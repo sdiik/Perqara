@@ -11,7 +11,7 @@ jobs:
     steps:
       # build here
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: YourApp.ipa
           path: |
