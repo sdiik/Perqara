@@ -1,14 +1,15 @@
-name: Pull Request II
+name: testing
 
 on:
   pull_request:
     branches:
-      - main
-  workflow_dispatch:
-
+        - main
 jobs:
     runs-on: macos-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - name: Build
+      - name: Checkout
+        uses: actions/checkout@v3
+    
+       - name: Build
         run: swift build
