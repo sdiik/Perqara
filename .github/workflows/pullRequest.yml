@@ -9,19 +9,14 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      # build here
-      - name: Upload artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: YourApp.ipa
-          path: |
-            ${{ Games.workspace }}/Games.ipa
-            ${{ Games.workspace }}/*.app.dSYM.zip
-            
+      - name: Checkout
+        uses: actions/checkout@v3
+    
       - name: Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.11.0
         with:
           access_token: ${{ github.token }}
+          
       - name: installed versions of Xcode
         uses: maxim-lobanov/setup-xcode@v1
         with:
@@ -32,6 +27,9 @@ jobs:
           ruby-version: '3.0'
           bundler-cache: true
 
+      - name: Install Bundler
+        run: gem install bundler
+        
       - name: Swift Packages Cache
         uses: actions/cache@v3
         with:
