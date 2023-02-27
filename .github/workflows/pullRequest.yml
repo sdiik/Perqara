@@ -15,8 +15,8 @@ jobs:
         with:
           name: YourApp.ipa
           path: |
-            ${{ github.workspace }}/Games.ipa
-            ${{ github.workspace }}/*.app.dSYM.zip
+            ${{ Games.workspace }}/Games.ipa
+            ${{ Games.workspace }}/*.app.dSYM.zip
             
       - name: Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.11.0
