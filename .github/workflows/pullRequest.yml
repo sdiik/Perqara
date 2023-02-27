@@ -30,11 +30,5 @@ jobs:
       - name: Install Bundler
         run: gem install bundler
         
-      - name: Swift Packages Cache
-        uses: actions/cache@v3
-        with:
-          path: Pods
-          key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-pods-
+     - uses: mikehardy/buildcache-action@v2
 
