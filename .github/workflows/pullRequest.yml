@@ -30,5 +30,8 @@ jobs:
       - name: Install Bundler
         run: gem install bundler
         
+      - name: Install gems
+        run: bundle install
+        
      - uses: mikehardy/buildcache-action@v2
 
