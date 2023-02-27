@@ -4,9 +4,10 @@ on:
   pull_request:
     branches:
         - main
-jobs:
-    runs-on: macos-latest
+    workflow_dispatch:
 
+jobs:
+    runs-on: macos-11
     steps:
       - name: Checkout
         uses: actions/checkout@v3
