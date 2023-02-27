@@ -15,7 +15,7 @@ jobs:
         with:
           name: YourApp.ipa
           path: |
-            ${{ github.workspace }}/ test.ipa
+            ${{ github.workspace }}/test.ipa
             ${{ github.workspace }}/*.app.dSYM.zip
       
       
